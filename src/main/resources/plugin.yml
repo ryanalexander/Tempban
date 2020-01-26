@@ -1,0 +1,9 @@
+name: Tempban
+version: ${project.version}
+description: A simple temp-ban plugin made for Senior Team
+author: AspyTheAussie
+main: me.isdev.AspyTheAussie.Tempban.Main
+commands:
+  tempban:
+    description: Main command for temporaraly banning players.
+    usage: '§cUsage: /tempban <user> <time> [reason]'

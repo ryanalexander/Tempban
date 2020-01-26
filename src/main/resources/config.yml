@@ -1,0 +1,40 @@
+#$####################################################$
+#$                  Tempban ${plugin.version}           $#
+#$                       by AspyTheAussie               $#
+#$                   Last update: 26/01/2020            $#
+#$                                                      $#
+#$    Thank-you for making your server a better place   $#
+#  $####################################################$
+
+#
+##        LANGUAGE SETTINGS
+##
+## Placeholders
+## %player%     - Player name
+## %reason%     - Reason for player ban
+## %time%         - Time remaining for player ban
+##
+## %DAYS%                - Days left until pardon
+## %HOURS%             - Hours left until pardon
+## %MINUTES%         - Minutes left until pardon
+## %SECONDS%         - Seconds left until pardon
+##
+#
+lang:
+    kick_template:
+        - "&cTemporarily Banned for"
+        - "%time%"
+        - ""
+        - "&7Reason:"
+        - "&f%reason%"
+
+    time_template_days: "&6%DAY%&7 Days,"
+    time_template_hours: "&6%HOUR%&7 Hours,"
+    time_template_minutes: "&6%MINUTE%&7 Minutes,"
+    time_template_seconds: "&6%SECOND%&7 Seconds"
+
+    player_banned: "&7You have banned %player% for %time%"
+
+    errors:
+        player_nonexistent: "&cIt seems %player% has never joined this server."
+        non_numeric: "&cIt seems you did not specify a valid number"
