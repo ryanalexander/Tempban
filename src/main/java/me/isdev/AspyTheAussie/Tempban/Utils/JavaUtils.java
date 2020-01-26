@@ -7,7 +7,7 @@ import java.util.List;
 
 public class JavaUtils {
 
-    public enum Translation {DENY, BROADCAST, SELF, TIME}
+    public enum Translation {DENY, SELF, TIME}
 
     public static boolean isPlural(int i){
         return i > 1 || i==0;
@@ -52,18 +52,6 @@ public class JavaUtils {
 
     public static String format(String s){
         return ChatColor.translateAlternateColorCodes('&',s);
-    }
-
-    public static boolean isNumeric(String s) {
-        if (s == null)
-            return false;
-
-        try {
-            Double.parseDouble(s);
-        } catch (NumberFormatException e) {
-            return false;
-        }
-        return true;
     }
 
     public static TimeUnit getUnit(String s) {

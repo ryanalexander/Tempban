@@ -1,7 +1,5 @@
 package me.isdev.AspyTheAussie.Tempban.Utils;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import me.isdev.AspyTheAussie.Tempban.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
@@ -27,9 +25,7 @@ public class PlayerBan implements ConfigurationSerializable {
         }
 
         Main.player_bans.put(player.getUniqueId(),this);
-        ArrayList<PlayerBan> bans=new ArrayList<>();
-        bans.addAll(Main.player_bans.values());
-        Main.config.set("bans",bans);
+        Main.config.set("bans",new ArrayList<>(Main.player_bans.values()));
         Main.getPlugin(Main.class).saveConfig();
     }
 
@@ -73,7 +69,7 @@ public class PlayerBan implements ConfigurationSerializable {
 
     @Override
     public Map<String, Object> serialize() {
-        LinkedHashMap result = new LinkedHashMap();
+        Map<String, Object> result = new HashMap<>();
         result.put("player",player.getUniqueId().toString());
         result.put("reason",reason);
         result.put("expire",expire);
