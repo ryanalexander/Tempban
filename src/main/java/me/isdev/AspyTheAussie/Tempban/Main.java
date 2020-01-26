@@ -26,7 +26,7 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         Logger logger = Bukkit.getLogger();
 
-        logger.info("Successfully enabled ApplyCraft");
+        logger.info("Successfully enabled Tempban");
 
         ConfigurationSerialization.registerClass(PlayerBan.class);
 
